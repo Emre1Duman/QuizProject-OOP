@@ -11,9 +11,10 @@ for question in question_data:
     new_question = Question(question["text"], question["answer"])
     question_bank.append(new_question)
 
+
 quiz = QuizBrain(question_bank)
 
-while quiz.still_has_questions():
+while quiz.still_has_questions(): #Continue if the question bank still has questions
     quiz.next_question()
 
 print("You've completed the quiz")
